@@ -1,0 +1,74 @@
+body {
+    z-index: 1;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.header-text {
+    color: #fff;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+.name-display {
+    z-index: 1;
+    font-size: 5em;
+    line-height: 1;
+    color: #555;
+    font-family: serif;
+    /*    max-width: 350px*/
+}
+
+.slogan {
+    z-index: 1;
+    border-left: 2px solid black;
+}
+
+.slogan .md-button {
+    background-color: rgba(255, 255, 255, .4);
+    max-height: 40px;
+    font-variant: small-caps;
+    font-weight: 400;
+    margin: 0px;
+    text-align: left;
+}
+
+.primary-section {
+    padding-bottom: 2%;
+}
+
+.parallax {
+    position: relative;
+    z-index: -1;
+    max-width: 100%;
+    margin-bottom: -60%;
+}
+
+.fold-offset {
+    margin-top: 15%;
+}
+
+.title-display {
+    margin-top: 20%;
+}
+
+.section-header {
+    background-color: rgba(0, 0, 0, .6);
+    padding-left: 20px;
+    min-height: 100px;
+}
+
+.section-header h3 {
+    font-variant: small-caps;
+    font-weight: 100;
+    font-size: 3em;
+    color: whitesmoke;
+    margin: 0px;
+}
+
+.icon-48 {
+    height: 48px;
+    width: 48px;
+}

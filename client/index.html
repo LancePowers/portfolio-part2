@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lance Powers</title>
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="components/projects/projects.css">
+
+</head>
+
+<body ng-controller="myController">
+    <div>
+        <div class="header" layout="row" layout-align="end center" layout-fill>
+            <md-button><a class="header-text" href="#home">Home</a></md-button>
+            <span flex></span>
+            <md-button><a class="header-text" href="#projects">Projects</a></md-button>
+            <md-button><a class="header-text" href="#background">Background</a></md-button>
+            <md-button><a class="header-text" href="#contact">Contact</a></md-button>
+        </div>
+    </div>
+    <img class="parallax" src="img/downtownBkg.jpg" du-parallax y="background" alt="" />
+    <div layout="row" class="title-display" layout-md="column" layout-sm="column">
+        <div flex="20" flex-offset-gt-md="30" flex-offset="10" class="md-display-4 name-display">Lance Powers</div>
+        <div flex="20" class="slogan" layout="column" layout-align="center start">
+            <md-button>
+                Dream
+            </md-button>
+            <md-button>
+                Design
+            </md-button>
+            <md-button>
+                Develop
+            </md-button>
+            <md-button>
+                Do
+            </md-button>
+
+        </div>
+    </div>
+
+    <div class="section-header  fold-offset">
+        <br>
+        <h3>Dream</h3>
+    </div>
+    <img class="parallax" src="img/congressBkg.jpg" du-parallax y="background" alt="" />
+    <div class="primary-section" layout="row" layout-padding layout-align="start start ">
+        <div flex-gt-sm="10" flex="5"></div>
+        <div flex="90" flex-gt-md="20" flex-gt-sm="40" layout="column" class="md-padding" ng-repeat="content in culture.content">
+            <h4>{{content.title}}</h4>
+            <md-icon md-svg-src="{{content.icon}}" class="icon-48"></md-icon>
+            <p>{{content.subtitle}}</p>
+            <p>{{content.answer}}</p>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <h3>Develop</h3>
+    </div>
+    <img class="parallax" src="img/museumBkg.jpg" du-parallax y="background" alt="" />
+    <projects class="primary-section"></projects>
+
+    <div class="section-header">
+        <h3>Design</h3>
+    </div>
+    <img class="parallax" src="img/mountainBkg.jpg" du-parallax y="background" alt="" />
+    <div class="section-header">
+        <h3>Do</h3>
+    </div>
+    <img class="parallax" src="img/dunesBkg.jpg" du-parallax y="background" alt="" />
+    <div class="section-header">
+        <h3>Background</h3>
+    </div>
+    <img class="parallax" src="img/forestBkg.jpg" du-parallax y="background" alt="" />
+
+    <md-content class="background-content">
+
+        <div layout="row" layout-md="column" layout-sm="column" class="md-padding">
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Education</span>
+                        <span class="md-subhead">University of Colorado</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-lg card-media"></div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>Action 1</md-button>
+                    <md-button>Action 2</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </md-content>
+
+    <!--    ANGULAR-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0-rc5/angular-material.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.6.0/angular-material-icons.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js"></script>
+
+    <!--PARALLAX-->
+    <script src="//oblador.github.io/angular-scroll/0.6.2/angular-scroll.min.js"></script>
+    <script src="//oblador.github.io/angular-parallax/angular-parallax.min.js"></script>
+
+    <script type="text/javascript" src="components/components.module.js"></script>
+
+    <script type="text/javascript" src="components/projects/projects.module.js"></script>
+    <script type="text/javascript" src="components/projects/projects.directive.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/project.service.js"></script>
+    <script type="text/javascript" src="js/culture.service.js"></script>
+</body>
+
+</html>
