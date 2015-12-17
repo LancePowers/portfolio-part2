@@ -3,13 +3,26 @@ body {
 }
 
 .header {
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, 0);
+    height: 60px;
+    margin-bottom: -60px
 }
 
 .header-text {
-    color: #fff;
+    color: #444;
     font-variant: small-caps;
     text-decoration: none;
+}
+
+.main-menu {
+    z-index: 20;
+    position: fixed;
+    padding: 0px;
+    right: 10px;
+}
+
+.open-menu {
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .name-display {
@@ -18,7 +31,6 @@ body {
     line-height: 1;
     color: #555;
     font-family: serif;
-    /*    max-width: 350px*/
 }
 
 .slogan {
@@ -29,33 +41,43 @@ body {
 .slogan .md-button {
     background-color: rgba(255, 255, 255, .4);
     max-height: 40px;
-    font-variant: small-caps;
-    font-weight: 400;
     margin: 0px;
     text-align: left;
 }
 
+.slogan .md-button a {
+    font-variant: small-caps;
+    font-weight: 400;
+    color: #333;
+    text-decoration: none;
+    padding-top: -5px;
+}
+
+
+/*
 .primary-section {
     padding-bottom: 2%;
 }
+*/
 
 .parallax {
-    position: relative;
+    position: absolute;
     z-index: -1;
     max-width: 100%;
-    margin-bottom: -60%;
+    min-height: 800px;
 }
 
 .fold-offset {
-    margin-top: 15%;
+    min-height: 100%;
 }
 
 .title-display {
-    margin-top: 20%;
+    margin-top: 25%;
+    margin-bottom: 25%;
 }
 
 .section-header {
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(100, 100, 100, .9);
     padding-left: 20px;
     min-height: 100px;
 }
@@ -68,7 +90,21 @@ body {
     margin: 0px;
 }
 
-.icon-48 {
-    height: 48px;
-    width: 48px;
+.icon-128 {
+    height: 128px;
+    width: 128px;
+}
+
+.light-icon-128 {
+    color: rgba(255, 255, 255, .6);
+    height: 128px;
+    width: 128px;
+}
+
+.light-title {
+    color: rgba(255, 255, 255, 1);
+}
+
+.section-body {
+    min-height: 700px;
 }

@@ -1,0 +1,9 @@
+<div class="primary-section" layout="row" layout-padding layout-align="start start">
+    <div class="culture-box md-whiteframe-2dp" flex="90" flex-gt-md="25" flex-gt-sm="40" layout="column" layout-align="center center" class="md-padding" ng-repeat="content in vm.culture.content">
+        <md-icon md-svg-src="{{content.icon}}" class="icon-48"></md-icon>
+        <h4 class="md-title">{{content.title}}</h4>
+        <p class="md-subhead">{{content.subtitle}}</p>
+        <p class="md-body-2">{{content.answer[0]}}</p>
+        <p class="md-body-2">{{content.answer[1]}}</p>
+    </div>
+</div>

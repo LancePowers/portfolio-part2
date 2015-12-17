@@ -1,8 +1,10 @@
-<div class="projects">
-    <md-grid-list md-cols-gt-md="10" md-cols-sm="3" md-cols-md="8" md-row-height-gt-md="1:1" md-row-height="3:3" md-gutter-gt-md="20px" md-gutter-gt-sm="8px" md-gutter="4px">
-        <md-grid-tile class="project-tiles" ng-repeat="project in vm.projects" ng-style="{
+<div>
+    <div class="projects">
+        <md-grid-list md-cols-gt-md="3" md-cols-sm="3" md-cols-md="8" md-row-height-gt-md="1:1" md-row-height="3:3" md-gutter-gt-md="20px" md-gutter-gt-sm="8px" md-gutter="4px">
+            <md-grid-tile class="project-tiles md-whiteframe-2dp" ng-repeat="project in vm.projects" ng-style="{
             'background-image': 'url('+project.background+')'
           }" ng-class="{desaturate: !project.color}" ng-mouseover="project.color=true" ng-mouseout="project.color=false" md-colspan-gt-sm="{{project.span.col}}" md-rowspan-gt-sm="{{project.span.row}}" ng-click="vm.showDetails($event,$index)">
-        </md-grid-tile>
-    </md-grid-list>
+            </md-grid-tile>
+        </md-grid-list>
+    </div>
 </div>

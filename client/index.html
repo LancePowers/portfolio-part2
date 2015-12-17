@@ -10,69 +10,124 @@
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="components/projects/projects.css">
+    <link rel="stylesheet" type="text/css" href="components/questions/questions.css">
 
 </head>
 
 <body ng-controller="myController">
-    <div>
-        <div class="header" layout="row" layout-align="end center" layout-fill>
-            <md-button><a class="header-text" href="#home">Home</a></md-button>
-            <span flex></span>
-            <md-button><a class="header-text" href="#projects">Projects</a></md-button>
-            <md-button><a class="header-text" href="#background">Background</a></md-button>
-            <md-button><a class="header-text" href="#contact">Contact</a></md-button>
-        </div>
-    </div>
-    <img class="parallax" src="img/downtownBkg.jpg" du-parallax y="background" alt="" />
+    <!--    BACKGROUND-->
+    <img class="parallax fold-offset" src="img/downtownBkg.jpg" du-parallax y="background" alt="" />
+
+    <!--    HEADER-->
+    <div class="header" id="home"></div>
+    <md-fab-toolbar class="main-menu" md-open="menu.isOpen" count="menu.count" md-direction="{{menu.selectedDirection}}">
+        <md-fab-trigger>
+            <md-button aria-label="menu" class="md-icon">
+                <md-icon md-menu-origin md-svg-icon="img/menu-icon.svg" class="icon-48"></md-icon>
+            </md-button>
+        </md-fab-trigger>
+        <md-toolbar>
+            <md-fab-actions class="md-toolbar-tools" ng-class="{'open-menu': menu.isOpen}">
+                <md-button><a class="header-text" href="#contact">Contact</a></md-button>
+                <md-button><a class="header-text" href="#background">Background</a></md-button>
+                <md-button><a class="header-text" href="#develop">Projects</a></md-button>
+                <md-button><a class="header-text" href="#dream">About</a></md-button>
+                <md-button><a class="header-text" href="#home">Home</a></md-button>
+            </md-fab-actions>
+        </md-toolbar>
+    </md-fab-toolbar>
+
+    <!--    /HEADER-->
+
+
+
+    <!--Title Content    -->
     <div layout="row" class="title-display" layout-md="column" layout-sm="column">
         <div flex="20" flex-offset-gt-md="30" flex-offset="10" class="md-display-4 name-display">Lance Powers</div>
         <div flex="20" class="slogan" layout="column" layout-align="center start">
-            <md-button>
-                Dream
+            <md-button><a href="#dream">
+                Dream</a>
             </md-button>
-            <md-button>
-                Design
+            <md-button><a href="#design">
+                Design</a>
             </md-button>
-            <md-button>
-                Develop
+            <md-button><a href="#develop">
+                Develop</a>
             </md-button>
-            <md-button>
-                Do
+            <md-button><a href="#do">
+                Do</a>
             </md-button>
 
         </div>
     </div>
+    <!--/Title Content    -->
 
-    <div class="section-header  fold-offset">
+    <!--DREAM-->
+    <div class="section-header">
+        <a name="dream"></a>
         <br>
         <h3>Dream</h3>
     </div>
-    <img class="parallax" src="img/congressBkg.jpg" du-parallax y="background" alt="" />
-    <div class="primary-section" layout="row" layout-padding layout-align="start start ">
-        <div flex-gt-sm="10" flex="5"></div>
-        <div flex="90" flex-gt-md="20" flex-gt-sm="40" layout="column" class="md-padding" ng-repeat="content in culture.content">
-            <h4>{{content.title}}</h4>
-            <md-icon md-svg-src="{{content.icon}}" class="icon-48"></md-icon>
-            <p>{{content.subtitle}}</p>
-            <p>{{content.answer}}</p>
-        </div>
-    </div>
 
+    <img class="parallax" src="img/congressBkg.jpg" du-parallax y="background" alt="" />
+
+    <div class="section-body" layout="row">
+        <questions flex></questions>
+    </div>
+    <!--/DREAM-->
+
+    <!--DEVELOP-->
     <div class="section-header">
+        <a name="develop"></a>
+        <br>
         <h3>Develop</h3>
     </div>
-    <img class="parallax" src="img/museumBkg.jpg" du-parallax y="background" alt="" />
-    <projects class="primary-section"></projects>
 
+    <img class="parallax" src="img/museumBkg.jpg" du-parallax y="background" alt="" />
+
+    <div class="section-body" layout="row">
+        <div flex></div>
+        <projects flex class="primary-section"></projects>
+        <div flex></div>
+    </div>
+    <!--/DEVELOP-->
+
+    <!--DESIGN-->
     <div class="section-header">
+        <a name="design"></a>
+        <br>
         <h3>Design</h3>
     </div>
-    <img class="parallax" src="img/mountainBkg.jpg" du-parallax y="background" alt="" />
+    <img class="parallax" ng-src="{{mountainBackground()}}" du-parallax y="background" alt="" />
+
+
+    <div class="section-body" layout="column" layout-align="start center">
+        <div layout="row" flex layout-align="start center">
+            <div flex ng-repeat="icon in designIcons" layout="column" layout-align="center center">
+                <a href="{{'http:'+icon.url}}">
+                    <md-icon md-svg-src="{{icon.icon}}" ng-class="isColored.mountain ? 'light-icon-128':'icon-128'" class="icon-128" ng-mouseout="isColored.mountain=false" ng-mouseover="isColored.mountain=true"></md-icon>
+                </a>
+                <p ng-class="isColored.mountain ? 'light-title md-subhead':''">{{icon.title}}</p>
+            </div>
+        </div>
+    </div>
+    <!--/DESIGN-->
+
+    <!--DO-->
     <div class="section-header">
+        <a name="do"></a>
+        <br>
         <h3>Do</h3>
     </div>
     <img class="parallax" src="img/dunesBkg.jpg" du-parallax y="background" alt="" />
+    <div class="section-body" layout="row">
+    </div>
+    <!--/DO-->
+
+    <!--BACKGROUND-->
     <div class="section-header">
+        <a name="background"></a>
+        <br>
         <h3>Background</h3>
     </div>
     <img class="parallax" src="img/forestBkg.jpg" du-parallax y="background" alt="" />
@@ -97,6 +152,7 @@
             </md-card>
         </div>
     </md-content>
+    <!--/BACKGROUND-->
 
     <!--    ANGULAR-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
@@ -114,6 +170,9 @@
 
     <script type="text/javascript" src="components/projects/projects.module.js"></script>
     <script type="text/javascript" src="components/projects/projects.directive.js"></script>
+
+    <script type="text/javascript" src="components/questions/questions.module.js"></script>
+    <script type="text/javascript" src="components/questions/questions.directive.js"></script>
 
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/angular.js"></script>

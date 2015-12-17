@@ -6,7 +6,8 @@
 .projects {
     background-size: cover;
     background-position: center;
-    padding: 30px;
+    /*    padding: 0px 400px 0px 400px;*/
+    margin: 50px 0px 50px 0px;
 }
 
 .project-tiles {
@@ -15,8 +16,9 @@
 }
 
 .project-dialog {
-    max-width: 500px;
+    max-width: 900px;
     background-color: rgba(255, 255, 255, .9);
+    padding: 10px;
 }
 
 .project-dialog md-card {
@@ -30,4 +32,25 @@
 
 .transparent-content {
     background-color: transparent;
+}
+
+.card-media img {
+    padding-top: 5%;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.tech-description {
+    padding: 2%;
+}
+
+.tech-description p {
+    color: #555;
+}
+
+.project-title h2 {
+    font-weight: 300;
+    padding-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
