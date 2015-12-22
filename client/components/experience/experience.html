@@ -1,0 +1,33 @@
+<md-content class="background-content" class="md-padding" layout="row" layout-wrap layout-align="center start">
+    <div layout="row" layout-md="row" layout-sm="column" layout-padding layout-margin layout-fill layout-align="center center">
+        <md-card flex="30" ng-repeat="experience in vm.experiences">
+            <md-card-title>
+                <md-card-title-text layout="column" layout-padding layout-margin>
+                    <span class="md-headline">{{experience.title}}</span>
+                    <span class="md-subhead">{{experience.organization}}</span>
+                </md-card-title-text>
+                <md-card-title-media layout="row" layout-padding layout-margin layout-align="center center">
+                    <div flex="40"><img src="{{experience.image}}" /> </div>
+                    <div layout="column" flex="50">
+                        <p class="md-body-2">Exciting Win</p>
+                        <p class="md-caption">{{experience.description}}</p>
+                    </div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-content>
+                <md-list>
+                    <md-list-item class="md-2-line" ng-repeat="bullet in experience.bullets">
+                        <div class="md-list-item-text">
+                            <h3>Exciting Win</h3>
+                            <p>{{experience.description}}</p>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button>Action 1</md-button>
+                <md-button>Action 2</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</md-content>

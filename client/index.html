@@ -10,7 +10,10 @@
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="components/projects/projects.css">
+    <link rel="stylesheet" type="text/css" href="components/footer/footer.css">
     <link rel="stylesheet" type="text/css" href="components/questions/questions.css">
+    <link rel="stylesheet" type="text/css" href="components/experience/experience.css">
+
 
 </head>
 
@@ -28,11 +31,24 @@
         </md-fab-trigger>
         <md-toolbar>
             <md-fab-actions class="md-toolbar-tools" ng-class="{'open-menu': menu.isOpen}">
-                <md-button><a class="header-text" href="#contact">Contact</a></md-button>
-                <md-button><a class="header-text" href="#background">Background</a></md-button>
-                <md-button><a class="header-text" href="#develop">Projects</a></md-button>
-                <md-button><a class="header-text" href="#dream">About</a></md-button>
-                <md-button><a class="header-text" href="#home">Home</a></md-button>
+                <a class="header-text" ng-click="showFooter($event)">
+                    <md-button>Contact</md-button>
+                </a>
+                <a class="header-text" href="//resume.creddle.io/resume/ikrgehkra1k">
+                    <md-button>Resume</md-button>
+                </a>
+                <a class="header-text" href="#deliver">
+                    <md-button>Background</md-button>
+                </a>
+                <a class="header-text" href="#develop">
+                    <md-button>Projects</md-button>
+                </a>
+                <a class="header-text" href="#dream">
+                    <md-button>About</md-button>
+                </a>
+                <a class="header-text" href="#home">
+                    <md-button>Home</md-button>
+                </a>
             </md-fab-actions>
         </md-toolbar>
     </md-fab-toolbar>
@@ -54,8 +70,8 @@
             <md-button><a href="#develop">
                 Develop</a>
             </md-button>
-            <md-button><a href="#do">
-                Do</a>
+            <md-button><a href="#deliver">
+                Deliver</a>
             </md-button>
 
         </div>
@@ -113,46 +129,16 @@
     </div>
     <!--/DESIGN-->
 
-    <!--DO-->
-    <div class="section-header">
-        <a name="do"></a>
-        <br>
-        <h3>Do</h3>
-    </div>
-    <img class="parallax" src="img/dunesBkg.jpg" du-parallax y="background" alt="" />
-    <div class="section-body" layout="row">
-    </div>
-    <!--/DO-->
 
-    <!--BACKGROUND-->
+    <!--DELIVER-->
     <div class="section-header">
-        <a name="background"></a>
+        <a name="deliver"></a>
         <br>
-        <h3>Background</h3>
+        <h3>Deliver</h3>
     </div>
     <img class="parallax" src="img/forestBkg.jpg" du-parallax y="background" alt="" />
-
-    <md-content class="background-content">
-
-        <div layout="row" layout-md="column" layout-sm="column" class="md-padding">
-            <md-card>
-                <md-card-title>
-                    <md-card-title-text>
-                        <span class="md-headline">Education</span>
-                        <span class="md-subhead">University of Colorado</span>
-                    </md-card-title-text>
-                    <md-card-title-media>
-                        <div class="md-media-lg card-media"></div>
-                    </md-card-title-media>
-                </md-card-title>
-                <md-card-actions layout="row" layout-align="end center">
-                    <md-button>Action 1</md-button>
-                    <md-button>Action 2</md-button>
-                </md-card-actions>
-            </md-card>
-        </div>
-    </md-content>
-    <!--/BACKGROUND-->
+    <experience></experience>
+    <!--/DELIVER-->
 
     <!--    ANGULAR-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
@@ -174,8 +160,12 @@
     <script type="text/javascript" src="components/questions/questions.module.js"></script>
     <script type="text/javascript" src="components/questions/questions.directive.js"></script>
 
+    <script type="text/javascript" src="components/experience/experience.module.js"></script>
+    <script type="text/javascript" src="components/experience/experience.directive.js"></script>
+
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="components/footer/footer.controller.js"></script>
     <script type="text/javascript" src="js/project.service.js"></script>
     <script type="text/javascript" src="js/culture.service.js"></script>
 </body>

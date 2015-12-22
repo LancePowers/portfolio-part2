@@ -2,7 +2,8 @@
 
 var app = angular.module('myApp', ['ngMaterial', 'duParallax', 'app.components']);
 
-app.controller('myController', function ($scope, parallaxHelper, $sce) {
+app.controller('myController', function ($scope, parallaxHelper, $sce, $mdBottomSheet) {
+    console.log($mdBottomSheet)
     $scope.background = parallaxHelper.createAnimator(-0.3, 150, -150);
     $scope.isOpen = false;
     $scope.menu = {
@@ -23,6 +24,17 @@ app.controller('myController', function ($scope, parallaxHelper, $sce) {
         } else {
             return 'img/mountainBkg.jpg'
         }
+    }
+
+    $scope.showFooter = function ($event) {
+        console.log($event);
+        $mdBottomSheet.show({
+            templateUrl: 'components/footer/footer.grid.html',
+            controller: 'footer',
+            controllerAs: 'vm',
+            clickOutsideToClose: true,
+            targetEvent: $event
+        })
     }
 
     $scope.designIcons = [{

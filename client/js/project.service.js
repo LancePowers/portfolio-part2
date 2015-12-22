@@ -51,16 +51,16 @@
                     row: 1,
                     col: 1
                 },
-                description: "gCasino was my first large project as a student at gSchool. It's a strong demonstration of my understanding of Object-Oriented Design principles, and ability to deal with complex game logic. I'm particularly proud of the 'book' button that will make automatically choose an action based upon the best odds.",
+                description: "gCasino blackjack was my first project as a student at gSchool. It’s a fully functioning blackjack game including a book button that automatically performs an action based upon the “book” best odds.",
                 techDescriptions: [{
-                    title: '',
-                    body: ''
+                    title: 'jQuery UI',
+                    body: 'I used jQuery UI to handle the drag and drop functionality of the chips. Chips are recognized both for betting and also for ‘coloring up’ or exchanging multiple smaller valued chips for a single higher value.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'Object Oriented',
+                    body: 'Object oriented programming was essential for this project. Attributes like the cards left in the deck and a player’s total chip account needed to persist between multiple hands.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'Game Logic ',
+                    body: 'The game logic involved was pretty complicated. It required the ability to process aces that could be counted as a 1 or 11, a computer AI to play correctly, and a ‘book’ feature that identified both hands and played the best odds.'
                 }],
                 technologies: ['jQuery', 'jQueryUI', 'HTML', 'CSS']
     }, {
@@ -90,16 +90,16 @@
                     row: 1,
                     col: 1
                 },
-                description: "BiPo is designed to help individuals diagnosed with a bipolar disorder gain a better understanding of the changes in their mood and other metrics that will help manage and treat the disease.",
+                description: "Seventy-Three was my capstone project for gSchool and the most impactful project I’ve created. It is a platform to organize and empower a support network for individuals being released from a 72 hour medical hold.",
                 techDescriptions: [{
-                    title: '',
-                    body: ''
+                    title: 'Modular',
+                    body: 'Seventy-Three is designed to be a dashboard of tools, so I thought it was important to create a modular structure. I wrote reusable custom directives to house the components and make it Angular 2.0 friendly.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'Angular Material',
+                    body: 'I used Angular Material to design and layout the app. I was able to start from scratch and, in just a couple days, I was able to combine their design and UI components to create the app.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'Orderly Integration',
+                    body: 'Also in it’s own custom directive that can be reused to show a bar chart on any dataset, I used NVD3 to generate an interactive chart to display information on insurance coverage provided by Orderly Health.'
                 }],
                 technologies: ['nodeJS', 'express', 'AngularJS', 'JavaScript', 'HTML', 'CSS']
             },
@@ -110,16 +110,16 @@
                     row: 1,
                     col: 1
                 },
-                description: '',
+                description: 'Twilio Tale is a story-telling app. Users can create a group story via sms and mms texts. It receives a text, forwards it’s content as a prompt to the next user, updates the story, and sends a link to the previous user to view the whole accumulated story.',
                 techDescriptions: [{
-                    title: '',
-                    body: ''
+                    title: 'Twilio API',
+                    body: 'Twilio Tale was designed as a way to thank Matt Makai, a Developer Evangelist at Twilio, for a presentation he gave to the cohort. As you can imagine it relied heavily on Twilio’s technology and API.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'SMS Handling',
+                    body: 'I had the chance to learn how to send, receive, and route text messages through the development of Twilio Tale. It conditionally handles texts from the user whose turn it is, as well as users who text out of turn.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'Express Routes',
+                    body: 'While not overly complicated, Twilio Tale is an example of my early experiences with express routing. I was able to parse incoming data to appropriately save, forward, or respond to each request.'
                 }],
                 technologies: ''
             },
@@ -130,12 +130,12 @@
                     row: 1,
                     col: 1
                 },
-                description: "Designed for those who agree with the principles of veganism, but aren't ready to give up the bacon, Half-Assed Vegan matches two users to have the impact of one vegan. This was a great chance to learn more about relational databases and a focus on simple, intuitive UI.",
+                description: "Half-Assed Vegan is for anyone who agrees with the moral tenants of veganism, but just can’t give up the bacon. It pairs two users based upon the days they can commit to being a vegan to create the impact of a whole vegan.",
                 techDescriptions: [{
-                    title: '',
-                    body: ''
+                    title: 'Relational Database',
+                    body: 'This project was a great way to delve into Postgres, Psql, and relational databases. It both stores user information including email address and day selection and uses that information to create matches.'
                 }, {
-                    title: '',
+                    title: 'Yummly API',
                     body: ''
                 }, {
                     title: '',
@@ -145,22 +145,22 @@
             },
 
             {
-                title: 'Marketing',
+                title: 'The LP Story',
                 background: 'img/lplogo.png',
                 span: {
                     row: 1,
                     col: 1
                 },
-                description: '',
+                description: 'The LP Story provides additional information on my past in marketing, leadership, and me as an entrepreneur. You can see accomplishments, examples of my previous work, and peer recommendations.',
                 techDescriptions: [{
-                    title: '',
-                    body: ''
+                    title: 'Volunteerism',
+                    body: 'I’ve done a considerable amount of work helping in the treatment and understanding of mental illness. The blog has links to some of the youth outreach and public education projects I’ve been involved with.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'Content Marketing',
+                    body: 'The LP Story hosts content I’ve generated for campaigns with both hobbyDB and EESI Lighting. The content spans in medium from articles to infographics to live events and video contests.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'WordPress',
+                    body: 'The LP Story was created by combining numerous components from a Wordpress template tool and tying them together with additional contact and other utility add-ons and widgets.'
                 }],
                 technologies: ''
                 },
@@ -171,16 +171,16 @@
                     row: 1,
                     col: 1
                 },
-                description: "A visualization of sentiment analysis from the 2015 democratic national debate.",
+                description: "Spout-About runs sentiment analysis on each response for the 2015 democratic presidential debate and visualizes the result using a color coded particle simulator flowing from each candidates mouth.",
                 techDescriptions: [{
-                    title: '',
-                    body: ''
+                    title: 'Alchemy API',
+                    body: 'I used IBM Watson’s Alchemy api to run the sentiment analysis for each of the responses for the debate. I used the keywords, sentiment type, and sentiment score from the response to populate the spout characteristics.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'Text Parsing',
+                    body: 'One of the challenges of this app was dividing the debate into a series of responses. The app parses a debate to isolate and separate a single candidate response to send to Alchemy for processing.'
                 }, {
-                    title: '',
-                    body: ''
+                    title: 'p5.js Visualization',
+                    body: 'The results of the sentiment analysis are used to create a flow of particles from each candidates mouth. Not only is the flow customized to the current keyword and sentiment, it also replicates the way particles flow in nature.'
                 }],
                 technologies: ['AlchemyAPI', 'p5', 'AngularJS']
     },
